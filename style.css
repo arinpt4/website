@@ -181,6 +181,7 @@ img {
     }
 
     img {
-        width: 55vw !important;      
+        width: 55vw !important; 
+        bottom: -150px;     
     }
 }
