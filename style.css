@@ -166,7 +166,7 @@ img {
 
 /* mobile stuff */
 @media (max-width: 600px) {
-    h1 {
+    body.home h1 {
         font-size: 25vw !important;
         white-space: nowrap;
         
