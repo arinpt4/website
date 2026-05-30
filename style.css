@@ -2,7 +2,7 @@
   font-family: "Got Heroin";
   src: url("/fonts/GotHeroin.woff") format("woff"),
        url("/fonts/Got_Heroin.ttf") format("truetype");
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
