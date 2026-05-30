@@ -27,6 +27,14 @@ h1 {
     font-size: 8rem;
 }
 
+h2 {
+    margin-top: 0;
+    font-family: "Moms Typewriter", sans-serif;
+    font-weight: normal;
+    text-align: center; 
+    font-size: 20px;
+}
+
 nav a {
     display: block;
     position: relative;
@@ -64,13 +72,14 @@ img {
   display: inline-block;
   width: 20px;       
   text-align: left;
-  animation: dots 1.5s steps(1, end) infinite;
+  animation: dots 2.0s steps(1, end) infinite;
 }
 
 @keyframes dots {
-  0%   { content: "."; }
-  33%  { content: ".."; }
-  66%  { content: "..."; }
+  0%   { content: ""; }
+  20%  { content: "."; }
+  40%  { content: ".."; }
+  60%  { content: "..."; }
 }
 
 .back {
@@ -95,6 +104,11 @@ img {
   align-items: center;
 }
 
+.top h1,
+.top h2 {
+  margin: 0;
+}
+
 .top .wip {
   margin: 0;
   width: auto;
@@ -106,4 +120,17 @@ img {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/* about.html */
+
+.about {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 650px;
+    width: 90%;          
+    text-align: left;
+    line-height: 1.6;
 }
