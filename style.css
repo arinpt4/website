@@ -167,7 +167,8 @@ img {
 /* mobile stuff */
 @media (max-width: 600px) {
     h1 {
-        font-size: 3rem;
+        font-size: 11vw;
+        white-space: nowrap;
     }
 
     nav {
@@ -179,6 +180,6 @@ img {
     }
 
     img {
-        width: 55vw;     
+        width: 150px !important;      
     }
 }
