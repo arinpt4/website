@@ -164,3 +164,21 @@ img {
 }
 
 
+/* mobile stuff */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    nav {
+        margin-top: 45vh;   
+    }
+
+    nav a {
+        font-size: 22px;
+    }
+
+    img {
+        width: 55vw;     
+    }
+}
