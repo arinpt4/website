@@ -167,8 +167,8 @@ img {
 /* mobile stuff */
 @media (max-width: 600px) {
     h1 {
-        font-size: 20px;
-        white-space: nowrap;
+        font-size: 25vw;
+        
     }
 
     nav {
