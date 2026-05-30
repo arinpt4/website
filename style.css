@@ -167,7 +167,7 @@ img {
 /* mobile stuff */
 @media (max-width: 600px) {
     h1 {
-        font-size: 15vw;
+        font-size: 25vw;
         white-space: nowrap;
     }
 
