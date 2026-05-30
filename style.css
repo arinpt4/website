@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Got Heroin";
+  src: url("/fonts/GotHeroin.woff") format("woff"),
+       url("/fonts/Got_Heroin.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Moms Typewriter";
+  src: url("fonts/MomsTypewriter.woff") format("woff"),
+       url("fonts/MomsTypewriter.ttf") format("truetype");
+  font-display: swap;
+}
+
+body.home {
+    background: white; 
+    color: black;
+    overflow: hidden;
+    height: 100%;
+}
+
+h1 {
+    margin-top: 0;
+    font-family: "Got Heroin", sans-serif;
+    font-weight: normal;
+    text-align: center; 
+    font-size: 8rem;
+}
+
+nav a {
+    display: block;
+    position: relative;
+    margin: 0 auto 10px;
+    top: 20px;
+    width: fit-content; 
+    margin: left; 
+    color: black; 
+    text-decoration: none; 
+    font-family: "Moms Typewriter", monospace;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    
+}
+nav a:hover {
+    color: grey;
+}
+
+img {
+    position: absolute;
+    top: 310px;     
+    right: -50px; 
+}
+
+/* projects.html */
+.wip {
+  font-family: "Moms Typewriter", monospace;
+  font-size: 20px;
+  text-align: center;
+}
+
+.wip::after {
+  content: ".";
+  display: inline-block;
+  width: 20px;       
+  text-align: left;
+  animation: dots 1.5s steps(1, end) infinite;
+}
+
+@keyframes dots {
+  0%   { content: "."; }
+  33%  { content: ".."; }
+  66%  { content: "..."; }
+}
+
+.back {
+  display: inline-block;
+  font-family: "Moms Typewriter", monospace;
+  font-size: 20px;
+  
+  color: black;
+  text-decoration: none;    
+  background: none;
+  border: none;
+}
+
+.back:hover {
+  color: grey;
+}
+
+.top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top .wip {
+  margin: 0;
+  width: auto;
+  text-align: center;
+}
+
+.back {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
