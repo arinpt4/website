@@ -12,13 +12,13 @@ every couple of years i would watch someone else's playthrough of it and eventua
 
 i think overall though, fran bow's phenominal artstyle really made it stick with me. some scenes were genuinely haunting and scared me so bad as a kid.
 
-but this year, i decided i would man up and play it instead of watching a let's play like i always do
+but this year, i decided i would man up and play it instead of watching a let's play like i always do.
 
 and it was amazing. it's a completely different experience and i highly recommend playing it yourself. even though i basically knew everything that would happen, i still got jumpscared in a couple places. but actually playing the game also meant that i got to look at the art closer and it is haunting to say the least. 
 
 anyways, another one that's really worth the watch is petscop. yes, i know its technically not a game but it has such an amazing artstyle and story. i can't get into it too much without spoiling but if you really enjoy watching theories i linked a theory i think solved the whole game.
 
-i guess for me something that makes a cozy horror game is a horror game i watched as a kid and scared the crap out of me. 
+i guess for me something that makes a cozy horror game is a horror game i watched as a kid that scared the hell outta me. 
 
 fran bow: https://store.steampowered.com/app/362680/Fran_Bow/
 
