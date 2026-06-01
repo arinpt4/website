@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css?v=2">
+    <title>blog</title>
+    <style>
+        /* styling for the rendered markdown, matching the site's fonts */
+        .post-page .content {
+            max-width: 650px;
+            width: 90%;
+            margin: 40px auto 80px;
+            font-family: "Moms Typewriter", monospace;
+            font-size: 18px;
+            line-height: 1.6;
+            color: black;
+            text-align: left;
+        }
+
+        .post-page .content h1,
+        .post-page .content h2,
+        .post-page .content h3 {
+            font-family: "Got Heroin", sans-serif;
+            font-weight: normal;
+            line-height: 1.1;
+        }
+
+        .post-page .content a { color: black; }
+        .post-page .content a:hover { color: grey; }
+
+        .post-page .content pre {
+            background: #f4f4f4;
+            padding: 12px;
+            overflow-x: auto;
+        }
+
+        .post-page .content code {
+            font-family: monospace;
+            font-size: 16px;
+        }
+
+        .post-page .content blockquote {
+            border-left: 3px solid #ccc;
+            margin: 0;
+            padding-left: 16px;
+            color: #555;
+        }
+
+        /* the site-wide img rule pins images to the corner —
+           reset that for images inside a post so they flow normally */
+        .post-page .content img {
+            position: static !important;
+            inset: auto !important;
+            max-width: 100%;
+            width: auto !important;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="post-page">
+    <div class="top">
+        <a href="/blog.html" class="back">back</a>
+        <h2 id="title"></h2>
+    </div>
+
+    <article class="content" id="content">Loading…</article>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+    <script>
+        (async function () {
+            const el = document.getElementById("content");
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get("p");
+            const passedTitle = params.get("t");   // title from the blog.html link
+
+            // only allow safe filenames: letters, numbers, dashes, underscores
+            if (!name || !/^[A-Za-z0-9_-]+$/.test(name)) {
+                el.textContent = "Post not found.";
+                return;
+            }
+
+            try {
+                const res = await fetch("/posts/" + name + ".md");
+                if (!res.ok) throw new Error(res.status);
+                const markdown = await res.text();
+                el.innerHTML = marked.parse(markdown);
+
+                // title priority: the t= from the link, then the first
+                // heading in the post, then the filename as a last resort
+                const heading = el.querySelector("h1, h2, h3");
+                const titleText = passedTitle || (heading ? heading.textContent : name);
+                document.title = titleText;
+                document.getElementById("title").textContent = titleText;
+            } catch (err) {
+                el.textContent = "Post not found.";
+            }
+        })();
+    </script>
+</body>
+</html>
